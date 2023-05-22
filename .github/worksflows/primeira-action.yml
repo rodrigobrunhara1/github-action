@@ -6,6 +6,16 @@ on:
     branches: ["master"]
   pull_request:
     types: [opened, synchronize]
+  issue_comment:
+    types: [created, deleted]
+
+#     Ou então, podemos usar o filtro branches para quando alguém fizer um push para a main ou em alguma branch que começa com releases/
+
+# on:
+#   push:
+#     branches:    
+#       - 'main'
+#       - 'releases/**'
 
 # Definindo o que queremos executar
 jobs:
